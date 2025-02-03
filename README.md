@@ -59,6 +59,10 @@ Desarrollar un formulario interactivo en Next.js que guíe al usuario a través 
 
 **Capturas de Pantalla o Demo:**
 - Se incluyen capturas de pantalla o un video demostrando el flujo completo del formulario, desde la pantalla de bienvenida hasta la pantalla de recomendación.
+ 
+
+https://github.com/user-attachments/assets/9f2065e4-9748-45be-9d98-b7a1333f7291
+
 
 **Nota:**  
 El diseño visual y las condiciones específicas para las recomendaciones se implementaron siguiendo las especificaciones del archivo de Figma proporcionado. El código está documentado y sigue buenas prácticas de desarrollo.
