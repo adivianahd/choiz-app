@@ -5,11 +5,12 @@ import { STEPS } from "@/app/questions";
 
 export function Step1({ step, getValue, update, onBack, onSubmit }: Step) {
   const [ disabled, setDisabled ] = React.useState<boolean>(true)
-  const onTextChange = (event: any) => {
+  
+  const onTextChange: React.ChangeEventHandler<HTMLTextAreaElement>  = (event) => {
     const value = event.target.value;
     update(step, 6, value)
   }
-  const questions = STEPS[step]
+  const questions = STEPS[1]
   const isOtherSelected = Boolean(getValue(step, 4))
   const otherValue = String(getValue(step, 6) || '')
   const onSelect = (index: number) => (value: boolean) => {

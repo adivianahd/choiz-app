@@ -5,7 +5,7 @@ import { STEPS } from "@/app/questions"
 
 export function Step2({ step, getValue, update, onBack, onSubmit }: Step) {
   const questions = STEPS[2]
-  const onSelect = (index: number) => (value: boolean) => {
+  const onSelect = (index: number) => () => {
     update(step, 0, false)
     update(step, 1, false)
     update(step, 2, false)

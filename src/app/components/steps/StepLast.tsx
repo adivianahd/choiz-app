@@ -14,9 +14,10 @@ export function StepLast({ answers, step, onBack }: Step) {
         <CollapsibleFAQ
           key={_step}
           question={QUESTIONS[_step-1]}
-          answer={answers[_step].map(a => STEPS[_step][a.id]).join(' - ')}
+          answer={answers[_step].map(a => STEPS[_step as keyof typeof STEPS][a.id]).join(' - ')}
         />))
       }
     </StepLayout>
   )
 }
+
