@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**Choiz Challenge**
 
-## Getting Started
 
-First, run the development server:
+**Objetivo:**  
+Desarrollar un formulario interactivo en Next.js que guíe al usuario a través de una serie de preguntas médicas y, basado en sus respuestas, muestre una recomendación personalizada. El proyecto está construido con TypeScript, utiliza Tailwind CSS para los estilos y está desplegado en Vercel.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Criterios de Aceptación Implementados:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Pantalla de Bienvenida:**
+   - Se implementó una pantalla inicial (`Welcome`) que da la bienvenida al usuario y lo introduce al formulario.
+   - Diseño responsivo utilizando **Tailwind CSS**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Preguntas Médicas:**
+   - El formulario incluye **cuatro preguntas médicas**, cada una con un tipo de respuesta:
+     - **Respuesta única:** Selección de una opción entre varias.
+     - **Respuesta múltiple:** Selección de varias opciones.
+     - **Texto libre:** Entrada de texto (usando un campo de texto).
+   - Las respuestas se guardan en un estado usando un hook y son persistentes a lo largo del formulario.
+   - Si el usuario retrocede, las respuestas previamente seleccionadas se muestran correctamente.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Pantalla de Recomendación:**
+   - Al finalizar las preguntas, se muestra una **pantalla de recomendación** basada en las respuestas proporcionadas.
+   - Las condiciones para cada recomendación se implementaron según las especificaciones del diseño (Figma).
 
-## Learn More
+4. **Integración con API:**
+   - En la pantalla de recomendación, se realiza una llamada al endpoint `https://679938bebe2191d708b25ceb.mockapi.io/api/faqs` para obtener las **preguntas y respuestas frecuentes (FAQs)**.
+   - Los datos obtenidos se muestran en la pantalla de recomendación, utilizando componentes dinámicos y estilos de **Tailwind CSS**.
 
-To learn more about Next.js, take a look at the following resources:
+5. **Mostrar Respuestas Anteriores:**
+   - En la pantalla de recomendación, al hacer clic en "Seleccionar", se muestra un resumen de las **respuestas previamente dadas** en el formulario.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Tecnologías Utilizadas:**
+- **Next.js:** Para el enrutamiento y la renderización del lado del servidor (SSR).
+- **TypeScript:** Para garantizar tipado seguro y un código más mantenible.
+- **Tailwind CSS:** Para los estilos, asegurando un diseño responsivo y consistente.
+- **React:** Para el manejo del estado de las respuestas y Fetch para realizar la llamada al endpoint de FAQs.
+- **Vercel:** Para la publicación del proyecto.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Despliegue en Vercel:**
+- El proyecto está desplegado en Vercel, accesible a través de un enlace público.
 
-## Deploy on Vercel
+- La URL del proyecto es: [Choiz](choiz-app.vercel.app).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Instrucciones para Ejecutar el Proyecto Localmente:**
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/adivianahd/choiz-app
+   ```
+2. Instalar dependencias:
+   ```bash
+   cd choiz-app
+   npm install
+   ```
+3. Ejecutar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abrir el navegador en `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Capturas de Pantalla o Demo:**
+- Se incluyen capturas de pantalla o un video demostrando el flujo completo del formulario, desde la pantalla de bienvenida hasta la pantalla de recomendación.
+
+**Nota:**  
+El diseño visual y las condiciones específicas para las recomendaciones se implementaron siguiendo las especificaciones del archivo de Figma proporcionado. El código está documentado y sigue buenas prácticas de desarrollo.
+
