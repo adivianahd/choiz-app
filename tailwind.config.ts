@@ -9,6 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
+        choiz: "var(--violet-choiz)",
+        black: "var(--black)",
+        white: "var(--white)",
+        'white-full': "var(--white-full)",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
